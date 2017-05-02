@@ -1,12 +1,20 @@
 var exports = module.exports = {};
 
 function PasswordMessage(m){
+  this.name = 'Password Message'
+  this.message= m;
 
 }
 
 function inRange(char,min,max){
     let unicode = char.charCodeAt(0);
-    
+    if(unicode >= min && unicode <=max){
+      return true;
+    }
+    else {
+      return false;
+    }
+
 }
 
 exports.checkLength = function(str){
@@ -30,7 +38,17 @@ exports.checkLength = function(str){
 
 
 exports.containsUpper =function(str){
+  let hasUpper = false;
+  try {
+    for(i=0; i<str.length; i++)
+    {
+      if()
+    }
+  } catch (e) {
 
+  } finally {
+
+  }
 }
 
 
