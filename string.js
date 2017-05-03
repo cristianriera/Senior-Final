@@ -42,22 +42,58 @@ exports.containsUpper =function(str){
   try {
     for(i=0; i<str.length; i++)
     {
-      if()
+      if(inRange(str[i], 65, 90)){
+        hasUpper = true;
+        throw new PasswordMessage(' has uppercase character');
+      }
+    }
+    if(hasUpper == false){
+      throw new PasswordMessage('does not have uppercase character')
     }
   } catch (e) {
+      console.log(e.message);
+      return hasUpper;
+  }
+}
 
-  } finally {
-
+exports.containsLower =function(str){
+  let hasLower = false;
+  try{
+    for(i=0; i<str.length; i++){
+      if(inRange(str[i], 97, 122)){
+        hasLower = true;
+        throw new PasswordMessage('has lowercase character');
+      }
+    }
+  }
+  if(hasLower==false){
+    throw new PasswordMessage('does not have lowercase character')
+  }
+  catch(e) {
+    console.log(e.message);
+    return hasLower;
   }
 }
 
 
-exports.containsLower =function(str){
-
-}
-
-
 exports.containsNumerical =function(str){
+  let hasNumerical = false;
+  try {
+    for(i=0; i<str.length; i++){
+      if(inRange(str[i], 48,57)){
+        hasNumerical = true;
+        throw new PasswordMessage('has numerical character');
+      }
+    }
+  }
+  if(hasNumerical==false){
+    throw new PasswordMessage('does not have numerical character')
+  }
+  catch (e) {
+    console.log(e.message);
+    return hasNumerical;
+
+  }
 
 }
 
