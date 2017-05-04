@@ -99,5 +99,18 @@ exports.containsNumerical =function(str){
 
 
 exports.containsSpecial =function(str){
+  let hasSpecial = false;
+  special = [33,64,35,36,37,94,38,42];
+  try {
+    for(let specialCha=0; specialCha<=special.length; specialCha++){
+      for(let strCha = 0; strCha<=str.length; strCha++){
+        if (str) {
 
+          }
+        }
+      }
+    }
+  } catch (e) {
+
+  }
 }
